@@ -9,16 +9,19 @@ _I'll assume that you already read the [Webpack docs](https://webpack.js.org) an
 1. Check if your Node.js version is >= 6.
 2. Clone the repository.
 3. Install [yarn](https://yarnpkg.com/lang/en/docs/install/).
-4. Run `yarn`.
+4. Run `yarn` (+ `yarn build` if weird errors appear).
 5. Change the package's name and description on `package.json`.
 6. Change the name of your extension on `src/manifest.json`.
-7. Run `yarn run start`
-8. Load your extension on Chrome following:
+7. Run `yarn start` to load the webserver to watch and preview the build files.
+8. Run `yarn build` for getting a working version to load on the browser.
+9. Load your extension on Chrome following:
     1. Access `chrome://extensions/`
     2. Check `Developer mode`
     3. Click on `Load unpacked extension`
     4. Select the `build` folder.
-8. Have fun.
+11. Have fun.
+
+**Note:** Once loaded the extension watches for changes in its `build/` folder and reload itself when a `yarn build` succeeds. Configure your IDE for triggering the build when a file matching a regex like `\\.(css|js|sass|less|scss|json)$` is saved.
 
 ## Structure
 All your extension's development code must be placed in `src` folder, including the extension manifest.
