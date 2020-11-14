@@ -1,5 +1,5 @@
 {
-  "name": "Chrome Extension Webpack",
+  "name": "Search Synonyms",
   "options_page": "options.html",
   "background": {
     "scripts": [
